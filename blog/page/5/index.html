@@ -9,11 +9,9 @@
   <meta name="author" content="Linker Lin">
 
   
-  <meta name="description" content="MongoDB是个非常优秀的NoSQL数据库。但是也有一个比较严重的问题。
-从设计上讲，MongoDB采用OS的MMap机制来替代自己管理的Cache，是一个非常取巧的方法。
-好处是简单，缺点是非常的不可控。
-在系统内存吃紧的情况下，mongodb的性能会急速下降。
-而且如果， &hellip;">
+  <meta name="description" content="用Jython做单元测试Java项目的时候，需要能动态的从Jar包里load类。 以下是一个简单的方法： import sys
+sys.path+=["./extlibs/servlet-api-2.5.jar"]
+from javax.servlet.http import * 第二行是关键， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -22,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://linkerlin.github.com">
+  <link rel="canonical" href="http://linkerlin.github.com/blog/page/5">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Linker Lin's Blog" type="application/atom+xml">
@@ -75,7 +73,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/05/14/mongodbs-problem/">Mongodb&#8217;s Problem</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/02/18/jythondong-tai-jia-zai-jar/">Jython动态加载Jar</a></h1>
     
     
       <p class="meta">
@@ -91,21 +89,23 @@
   
 
 
-<time datetime="2013-05-14T17:17:00+08:00" pubdate data-updated="true">May 14<span>th</span>, 2013</time>
+<time datetime="2013-02-18T13:49:00+08:00" pubdate data-updated="true">Feb 18<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>MongoDB是个非常优秀的NoSQL数据库。但是也有一个比较严重的问题。
-从设计上讲，MongoDB采用OS的MMap机制来替代自己管理的Cache，是一个非常取巧的方法。
-好处是简单，缺点是非常的不可控。
-在系统内存吃紧的情况下，mongodb的性能会急速下降。
-而且如果，由于某种原因导致系统死机，那么只有在开启日志的情况下，数据才能保证完整。
-但是开启日志以后的mongodb的性能又会下降。</p>
+  <div class="entry-content"><p> 用Jython做单元测试Java项目的时候，需要能动态的从Jar包里load类。</p>
 
-<h1>所以，如果没有必要，千万不要在mongodb里面存储很重要的数据。</h1>
+<p>以下是一个简单的方法：</p>
+
+<pre><code>import sys
+sys.path+=["./extlibs/servlet-api-2.5.jar"]
+from javax.servlet.http import *
+</code></pre>
+
+<p>第二行是关键，只要你能找到Jar的位置，就不愁加载不起来哈。</p>
 </div>
   
   
@@ -115,9 +115,11 @@
   
   <div class="pagination">
     
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
+      <a class="prev" href="/blog/page/6/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/4/">Newer &rarr;</a>
     
   </div>
 </div>

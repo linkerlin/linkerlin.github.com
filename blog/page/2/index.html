@@ -9,11 +9,8 @@
   <meta name="author" content="Linker Lin">
 
   
-  <meta name="description" content="MongoDB是个非常优秀的NoSQL数据库。但是也有一个比较严重的问题。
-从设计上讲，MongoDB采用OS的MMap机制来替代自己管理的Cache，是一个非常取巧的方法。
-好处是简单，缺点是非常的不可控。
-在系统内存吃紧的情况下，mongodb的性能会急速下降。
-而且如果， &hellip;">
+  <meta name="description" content="374是Mac Book Pro的2010年中款，由于显卡是Nvidia的320m，比后面3年的MBP显卡都要好，所以堪称一代经典。 MBP 374的内存只有4GB，而且是1.5v的DDR3 1066。所以升级很麻烦。
+很多人想一次升级两条内存条，但是苦于找不到对应型号，只好用1333的替代。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -22,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://linkerlin.github.com">
+  <link rel="canonical" href="http://linkerlin.github.com/blog/page/2">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Linker Lin's Blog" type="application/atom+xml">
@@ -75,7 +72,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/05/14/mongodbs-problem/">Mongodb&#8217;s Problem</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/03/02/mac-book-pro-374-2010-mid-kuan-sheng-ji-10gbnei-cun/">Mac Book Pro 374 2010 Mid 款升级10GB内存</a></h1>
     
     
       <p class="meta">
@@ -91,21 +88,22 @@
   
 
 
-<time datetime="2013-05-14T17:17:00+08:00" pubdate data-updated="true">May 14<span>th</span>, 2013</time>
+<time datetime="2013-03-02T10:24:00+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>MongoDB是个非常优秀的NoSQL数据库。但是也有一个比较严重的问题。
-从设计上讲，MongoDB采用OS的MMap机制来替代自己管理的Cache，是一个非常取巧的方法。
-好处是简单，缺点是非常的不可控。
-在系统内存吃紧的情况下，mongodb的性能会急速下降。
-而且如果，由于某种原因导致系统死机，那么只有在开启日志的情况下，数据才能保证完整。
-但是开启日志以后的mongodb的性能又会下降。</p>
+  <div class="entry-content"><pre><code>374是Mac Book Pro的2010年中款，由于显卡是Nvidia的320m，比后面3年的MBP显卡都要好，所以堪称一代经典。
+</code></pre>
 
-<h1>所以，如果没有必要，千万不要在mongodb里面存储很重要的数据。</h1>
+<p>MBP 374的内存只有4GB，而且是1.5v的DDR3 1066。所以升级很麻烦。
+很多人想一次升级两条内存条，但是苦于找不到对应型号，只好用1333的替代。</p>
+
+<p>问题是，两条1333的内存在374上不能点亮，所以，最稳妥的升级方案就是用一条1333的8GB替换原来的2GB条，组成10GB的内存。虽然没有了双通道的性能优势，但是多出来的内存怎么也比硬盘快了三个数量级。所以总体来说，性能提升还是非常大的。</p>
+
+<p>昨天升级好，以后，开了所有常用的程序，开发环境，word，内存还有3GB剩余。可见，即便升级到两条8GB的配置，也没有太多的提升空间。</p>
 </div>
   
   
@@ -115,9 +113,11 @@
   
   <div class="pagination">
     
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
+      <a class="prev" href="/blog/page/3/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/">Newer &rarr;</a>
     
   </div>
 </div>

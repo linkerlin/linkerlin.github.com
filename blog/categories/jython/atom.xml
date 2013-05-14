@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Jython | Linker Lin's Blog]]></title>
+  <link href="http://linkerlin.github.com/blog/categories/jython/atom.xml" rel="self"/>
+  <link href="http://linkerlin.github.com/"/>
+  <updated>2013-05-14T17:25:11+08:00</updated>
+  <id>http://linkerlin.github.com/</id>
+  <author>
+    <name><![CDATA[Linker Lin]]></name>
+    <email><![CDATA[linker.lin@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Jython设置默认编码]]></title>
+    <link href="http://linkerlin.github.com/blog/2013/02/18/jythonshe-zhi-mo-ren-bian-ma/"/>
+    <updated>2013-02-18T13:51:00+08:00</updated>
+    <id>http://linkerlin.github.com/blog/2013/02/18/jythonshe-zhi-mo-ren-bian-ma</id>
+    <content type="html"><![CDATA[<p>Jython项目对非ascii编码的支持不是很好，尤其是在windows环境。</p>
+
+<p>但是需要用Jython做一些和Java配合的工作，又必须要能够在Windows环境工作。经过一番研究终于发现两个可行的方法。</p>
+
+<p>在Win7命令行直接运行Jython 2.7a2是不行的，因为Jython默认是ascii编码，而Win7默认是GBK编码，更加悲剧的是JVM又不支持在Console使用GBK.</p>
+
+<p>一个简单的解决方法：</p>
+
+<pre><code>1   jython -C "utf-8"
+</code></pre>
+
+<p>看看默认编码：</p>
+
+<pre><code>1   &gt;&gt;&gt; import sys
+2   &gt;&gt;&gt; sys.defaultencoding
+3   'ascii'
+</code></pre>
+
+<p>注意虽然系统默认编码还是ascii，但是已经可以正常的使用Shell了。因为JVM的默认编码已经改过了来了。</p>
+
+<p>然后再执行下面这段代码：</p>
+
+<pre><code>1   from org.python.core import codecs
+2   codecs.setDefaultEncoding('utf-8')
+</code></pre>
+
+<p>或者：</p>
+
+<pre><code>1   import sys
+2   reload(sys)
+3   sys.setdefaultencoding('utf-8')
+</code></pre>
+
+<p>再检查下Jython的默认编码：</p>
+
+<pre><code>1   &gt;&gt;&gt; sys.defaultencoding
+2   'utf-8'
+</code></pre>
+
+<p>搞定。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Jython动态加载Jar]]></title>
+    <link href="http://linkerlin.github.com/blog/2013/02/18/jythondong-tai-jia-zai-jar/"/>
+    <updated>2013-02-18T13:49:00+08:00</updated>
+    <id>http://linkerlin.github.com/blog/2013/02/18/jythondong-tai-jia-zai-jar</id>
+    <content type="html"><![CDATA[<p> 用Jython做单元测试Java项目的时候，需要能动态的从Jar包里load类。</p>
+
+<p>以下是一个简单的方法：</p>
+
+<pre><code>import sys
+sys.path+=["./extlibs/servlet-api-2.5.jar"]
+from javax.servlet.http import *
+</code></pre>
+
+<p>第二行是关键，只要你能找到Jar的位置，就不愁加载不起来哈。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Jython加载Jar给JavaCode用]]></title>
+    <link href="http://linkerlin.github.com/blog/2013/02/18/jythonjia-zai-jargei-javacodeyong/"/>
+    <updated>2013-02-18T13:48:00+08:00</updated>
+    <id>http://linkerlin.github.com/blog/2013/02/18/jythonjia-zai-jargei-javacodeyong</id>
+    <content type="html"><![CDATA[<p>上篇提到的把jar加入到Jython的sys.path里，只能解决Jython使用jar的问题。如果是Java代码要用Jar,例如使用Class.forName(xxxxx)，上述方法就不行了。</p>
+
+<p>解决的方法是使用</p>
+
+<p>  <a href="https://gist.github.com/4661588">https://gist.github.com/4661588</a></p>
+
+<p>  <a href="https://gist.github.com/4654376">https://gist.github.com/4654376</a></p>
+
+<p>里的方法.</p>
+]]></content>
+  </entry>
+  
+</feed>

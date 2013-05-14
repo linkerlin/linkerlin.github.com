@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Linker Lin's Blog]]></title>
+  <link href="http://linkerlin.github.com/atom.xml" rel="self"/>
+  <link href="http://linkerlin.github.com/"/>
+  <updated>2013-05-14T17:25:11+08:00</updated>
+  <id>http://linkerlin.github.com/</id>
+  <author>
+    <name><![CDATA[Linker Lin]]></name>
+    <email><![CDATA[linker.lin@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[mongodb's problem]]></title>
+    <link href="http://linkerlin.github.com/blog/2013/05/14/mongodbs-problem/"/>
+    <updated>2013-05-14T17:17:00+08:00</updated>
+    <id>http://linkerlin.github.com/blog/2013/05/14/mongodbs-problem</id>
+    <content type="html"><![CDATA[<p>MongoDB是个非常优秀的NoSQL数据库。但是也有一个比较严重的问题。
+从设计上讲，MongoDB采用OS的MMap机制来替代自己管理的Cache，是一个非常取巧的方法。
+好处是简单，缺点是非常的不可控。
+在系统内存吃紧的情况下，mongodb的性能会急速下降。
+而且如果，由于某种原因导致系统死机，那么只有在开启日志的情况下，数据才能保证完整。
+但是开启日志以后的mongodb的性能又会下降。</p>
+
+<h1>所以，如果没有必要，千万不要在mongodb里面存储很重要的数据。</h1>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mac Book Pro 374 2010 mid 款升级10GB内存]]></title>
+    <link href="http://linkerlin.github.com/blog/2013/03/02/mac-book-pro-374-2010-mid-kuan-sheng-ji-10gbnei-cun/"/>
+    <updated>2013-03-02T10:24:00+08:00</updated>
+    <id>http://linkerlin.github.com/blog/2013/03/02/mac-book-pro-374-2010-mid-kuan-sheng-ji-10gbnei-cun</id>
+    <content type="html"><![CDATA[<pre><code>374是Mac Book Pro的2010年中款，由于显卡是Nvidia的320m，比后面3年的MBP显卡都要好，所以堪称一代经典。
+</code></pre>
+
+<p>MBP 374的内存只有4GB，而且是1.5v的DDR3 1066。所以升级很麻烦。
+很多人想一次升级两条内存条，但是苦于找不到对应型号，只好用1333的替代。</p>
+
+<p>问题是，两条1333的内存在374上不能点亮，所以，最稳妥的升级方案就是用一条1333的8GB替换原来的2GB条，组成10GB的内存。虽然没有了双通道的性能优势，但是多出来的内存怎么也比硬盘快了三个数量级。所以总体来说，性能提升还是非常大的。</p>
+
+<p>昨天升级好，以后，开了所有常用的程序，开发环境，word，内存还有3GB剩余。可见，即便升级到两条8GB的配置，也没有太多的提升空间。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Python系语言发展综述]]></title>
+    <link href="http://linkerlin.github.com/blog/2013/02/18/pythonxi-yu-yan-fa-zhan-zong-shu/"/>
+    <updated>2013-02-18T13:53:00+08:00</updated>
+    <id>http://linkerlin.github.com/blog/2013/02/18/pythonxi-yu-yan-fa-zhan-zong-shu</id>
+    <content type="html"><![CDATA[<p>Python系语言经过多年的发展，衍生出多个版本。其中：</p>
+
+<h4>CPython</h4>
+
+<p>也就是通常说的Python。这个版本在3.x系列发展的时候遇到困难，由于设计上的失误，很多开源组件还是坚持在2.5+版本。这种情况，在3.x系列不发生巨大改变的情况下，不会改变。</p>
+
+<h4>Cython</h4>
+
+<p>由于人工智能和数学的需要，更快的数值计算需求催生了Cython。Cython的优势：代码可以从Python转换到C/CPP，从而保护了源码并且提高了CPU密集性的计算的性能。</p>
+
+<h4>PyPy</h4>
+
+<p>从欧盟拿了不少资助，发展的很好。RPython是其核心的简化的Python方言。性能提升来自JIT编译器。但是，PyPy在兼容性上做不到Cython那样的无缝融合到标准CPython环境。从而，很少有人使用，基本是玩具。</p>
+
+<h4>mypy</h4>
+
+<p>一个刚起步的方言，画了一个很大的饼。</p>
+
+<h4>shedskin</h4>
+
+<p>一个务实的Python到C++编译器，不能100%兼容，但是可以独立运行。同样是玩具。</p>
+
+<h4>Jython</h4>
+
+<p>兼容度极高，但是面向Java环境，不适合需要使用C扩展的情况。</p>
+
+<h4>IronPython</h4>
+
+<p>微软系的东西，不解释。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Jython设置默认编码]]></title>
+    <link href="http://linkerlin.github.com/blog/2013/02/18/jythonshe-zhi-mo-ren-bian-ma/"/>
+    <updated>2013-02-18T13:51:00+08:00</updated>
+    <id>http://linkerlin.github.com/blog/2013/02/18/jythonshe-zhi-mo-ren-bian-ma</id>
+    <content type="html"><![CDATA[<p>Jython项目对非ascii编码的支持不是很好，尤其是在windows环境。</p>
+
+<p>但是需要用Jython做一些和Java配合的工作，又必须要能够在Windows环境工作。经过一番研究终于发现两个可行的方法。</p>
+
+<p>在Win7命令行直接运行Jython 2.7a2是不行的，因为Jython默认是ascii编码，而Win7默认是GBK编码，更加悲剧的是JVM又不支持在Console使用GBK.</p>
+
+<p>一个简单的解决方法：</p>
+
+<pre><code>1   jython -C "utf-8"
+</code></pre>
+
+<p>看看默认编码：</p>
+
+<pre><code>1   &gt;&gt;&gt; import sys
+2   &gt;&gt;&gt; sys.defaultencoding
+3   'ascii'
+</code></pre>
+
+<p>注意虽然系统默认编码还是ascii，但是已经可以正常的使用Shell了。因为JVM的默认编码已经改过了来了。</p>
+
+<p>然后再执行下面这段代码：</p>
+
+<pre><code>1   from org.python.core import codecs
+2   codecs.setDefaultEncoding('utf-8')
+</code></pre>
+
+<p>或者：</p>
+
+<pre><code>1   import sys
+2   reload(sys)
+3   sys.setdefaultencoding('utf-8')
+</code></pre>
+
+<p>再检查下Jython的默认编码：</p>
+
+<pre><code>1   &gt;&gt;&gt; sys.defaultencoding
+2   'utf-8'
+</code></pre>
+
+<p>搞定。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Jython动态加载Jar]]></title>
+    <link href="http://linkerlin.github.com/blog/2013/02/18/jythondong-tai-jia-zai-jar/"/>
+    <updated>2013-02-18T13:49:00+08:00</updated>
+    <id>http://linkerlin.github.com/blog/2013/02/18/jythondong-tai-jia-zai-jar</id>
+    <content type="html"><![CDATA[<p> 用Jython做单元测试Java项目的时候，需要能动态的从Jar包里load类。</p>
+
+<p>以下是一个简单的方法：</p>
+
+<pre><code>import sys
+sys.path+=["./extlibs/servlet-api-2.5.jar"]
+from javax.servlet.http import *
+</code></pre>
+
+<p>第二行是关键，只要你能找到Jar的位置，就不愁加载不起来哈。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Jython加载Jar给JavaCode用]]></title>
+    <link href="http://linkerlin.github.com/blog/2013/02/18/jythonjia-zai-jargei-javacodeyong/"/>
+    <updated>2013-02-18T13:48:00+08:00</updated>
+    <id>http://linkerlin.github.com/blog/2013/02/18/jythonjia-zai-jargei-javacodeyong</id>
+    <content type="html"><![CDATA[<p>上篇提到的把jar加入到Jython的sys.path里，只能解决Jython使用jar的问题。如果是Java代码要用Jar,例如使用Class.forName(xxxxx)，上述方法就不行了。</p>
+
+<p>解决的方法是使用</p>
+
+<p>  <a href="https://gist.github.com/4661588">https://gist.github.com/4661588</a></p>
+
+<p>  <a href="https://gist.github.com/4654376">https://gist.github.com/4654376</a></p>
+
+<p>里的方法.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cython的优势和Python性能优化]]></title>
+    <link href="http://linkerlin.github.com/blog/2013/02/18/cythonde-you-shi/"/>
+    <updated>2013-02-18T11:41:00+08:00</updated>
+    <id>http://linkerlin.github.com/blog/2013/02/18/cythonde-you-shi</id>
+    <content type="html"><![CDATA[<p>Python的性能一直是很多人惦记的问题。但是实际上，Python的IO性能并不低。主要的性能瓶颈有2个：</p>
+
+<h4>GC瓶颈</h4>
+
+<p>由于CPython采用的是引用计数。所以，为了解决循环引用，CPython引入了一个探测器。这个探测器每隔N次对象创建就会启动一次。这在有比较繁杂的逻辑的Server端程序上是非常的要命的。
+但是解决方法却很简单。直接关闭GC。
+这并不会导致大量的内存泄漏，因为，Python已经用了引用计数来管理大部分内存。只有少数的存在循环引用的场合会泄漏内存。
+这个只需要定期启动GC，即可。例如每10分钟启动一次。</p>
+
+<h4>CPU密集运算瓶颈</h4>
+
+<p>这里就是Cython最擅长的地方了。
+只需要在原有的Python代码上标注上类型。即可把性能提升30%~2000%.由于CPU密集型的场合占整个代码的比例往往是很有限的。所以，这些改动的成本是很低的。</p>
+
+<h4>性能以外</h4>
+
+<p>Cython除了可以提升运行时性能外，还有一个好处，就是可以保护源码。不同于Python的pyc文件，Cython只生成C代码，然后再编译到.so。所以，几乎没有可能做反向工程来获得源码。故也很适合需要发布可执行文件的客户端开发。</p>
+
+<h4>总结</h4>
+
+<p>不要过于纠结Python的性能了。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[我的Blog搬家到这里啦]]></title>
+    <link href="http://linkerlin.github.com/blog/2013/02/18/first-post/"/>
+    <updated>2013-02-18T11:25:00+08:00</updated>
+    <id>http://linkerlin.github.com/blog/2013/02/18/first-post</id>
+    <content type="html"><![CDATA[<p>再也不用同时维护 oschina / csdn / iteye 上的blog了。
+哈哈哈～</p>
+]]></content>
+  </entry>
+  
+</feed>

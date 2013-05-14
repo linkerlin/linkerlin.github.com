@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Python | Linker Lin's Blog]]></title>
+  <link href="http://linkerlin.github.com/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://linkerlin.github.com/"/>
+  <updated>2013-05-14T17:25:11+08:00</updated>
+  <id>http://linkerlin.github.com/</id>
+  <author>
+    <name><![CDATA[Linker Lin]]></name>
+    <email><![CDATA[linker.lin@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Python系语言发展综述]]></title>
+    <link href="http://linkerlin.github.com/blog/2013/02/18/pythonxi-yu-yan-fa-zhan-zong-shu/"/>
+    <updated>2013-02-18T13:53:00+08:00</updated>
+    <id>http://linkerlin.github.com/blog/2013/02/18/pythonxi-yu-yan-fa-zhan-zong-shu</id>
+    <content type="html"><![CDATA[<p>Python系语言经过多年的发展，衍生出多个版本。其中：</p>
+
+<h4>CPython</h4>
+
+<p>也就是通常说的Python。这个版本在3.x系列发展的时候遇到困难，由于设计上的失误，很多开源组件还是坚持在2.5+版本。这种情况，在3.x系列不发生巨大改变的情况下，不会改变。</p>
+
+<h4>Cython</h4>
+
+<p>由于人工智能和数学的需要，更快的数值计算需求催生了Cython。Cython的优势：代码可以从Python转换到C/CPP，从而保护了源码并且提高了CPU密集性的计算的性能。</p>
+
+<h4>PyPy</h4>
+
+<p>从欧盟拿了不少资助，发展的很好。RPython是其核心的简化的Python方言。性能提升来自JIT编译器。但是，PyPy在兼容性上做不到Cython那样的无缝融合到标准CPython环境。从而，很少有人使用，基本是玩具。</p>
+
+<h4>mypy</h4>
+
+<p>一个刚起步的方言，画了一个很大的饼。</p>
+
+<h4>shedskin</h4>
+
+<p>一个务实的Python到C++编译器，不能100%兼容，但是可以独立运行。同样是玩具。</p>
+
+<h4>Jython</h4>
+
+<p>兼容度极高，但是面向Java环境，不适合需要使用C扩展的情况。</p>
+
+<h4>IronPython</h4>
+
+<p>微软系的东西，不解释。</p>
+]]></content>
+  </entry>
+  
+</feed>

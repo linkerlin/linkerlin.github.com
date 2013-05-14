@@ -9,11 +9,7 @@
   <meta name="author" content="Linker Lin">
 
   
-  <meta name="description" content="MongoDB是个非常优秀的NoSQL数据库。但是也有一个比较严重的问题。
-从设计上讲，MongoDB采用OS的MMap机制来替代自己管理的Cache，是一个非常取巧的方法。
-好处是简单，缺点是非常的不可控。
-在系统内存吃紧的情况下，mongodb的性能会急速下降。
-而且如果， &hellip;">
+  <meta name="description" content="上篇提到的把jar加入到Jython的sys.path里，只能解决Jython使用jar的问题。如果是Java代码要用Jar,例如使用Class.forName(xxxxx)，上述方法就不行了。 解决的方法是使用 https://gist.github.com/4661588 https:// &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -22,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://linkerlin.github.com">
+  <link rel="canonical" href="http://linkerlin.github.com/blog/page/6">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Linker Lin's Blog" type="application/atom+xml">
@@ -75,7 +71,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/05/14/mongodbs-problem/">Mongodb&#8217;s Problem</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/02/18/jythonjia-zai-jargei-javacodeyong/">Jython加载Jar给JavaCode用</a></h1>
     
     
       <p class="meta">
@@ -91,21 +87,22 @@
   
 
 
-<time datetime="2013-05-14T17:17:00+08:00" pubdate data-updated="true">May 14<span>th</span>, 2013</time>
+<time datetime="2013-02-18T13:48:00+08:00" pubdate data-updated="true">Feb 18<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>MongoDB是个非常优秀的NoSQL数据库。但是也有一个比较严重的问题。
-从设计上讲，MongoDB采用OS的MMap机制来替代自己管理的Cache，是一个非常取巧的方法。
-好处是简单，缺点是非常的不可控。
-在系统内存吃紧的情况下，mongodb的性能会急速下降。
-而且如果，由于某种原因导致系统死机，那么只有在开启日志的情况下，数据才能保证完整。
-但是开启日志以后的mongodb的性能又会下降。</p>
+  <div class="entry-content"><p>上篇提到的把jar加入到Jython的sys.path里，只能解决Jython使用jar的问题。如果是Java代码要用Jar,例如使用Class.forName(xxxxx)，上述方法就不行了。</p>
 
-<h1>所以，如果没有必要，千万不要在mongodb里面存储很重要的数据。</h1>
+<p>解决的方法是使用</p>
+
+<p>  <a href="https://gist.github.com/4661588">https://gist.github.com/4661588</a></p>
+
+<p>  <a href="https://gist.github.com/4654376">https://gist.github.com/4654376</a></p>
+
+<p>里的方法.</p>
 </div>
   
   
@@ -115,9 +112,11 @@
   
   <div class="pagination">
     
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
+      <a class="prev" href="/blog/page/7/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/5/">Newer &rarr;</a>
     
   </div>
 </div>

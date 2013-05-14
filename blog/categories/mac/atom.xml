@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Mac | Linker Lin's Blog]]></title>
+  <link href="http://linkerlin.github.com/blog/categories/mac/atom.xml" rel="self"/>
+  <link href="http://linkerlin.github.com/"/>
+  <updated>2013-05-14T17:25:11+08:00</updated>
+  <id>http://linkerlin.github.com/</id>
+  <author>
+    <name><![CDATA[Linker Lin]]></name>
+    <email><![CDATA[linker.lin@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mac Book Pro 374 2010 mid 款升级10GB内存]]></title>
+    <link href="http://linkerlin.github.com/blog/2013/03/02/mac-book-pro-374-2010-mid-kuan-sheng-ji-10gbnei-cun/"/>
+    <updated>2013-03-02T10:24:00+08:00</updated>
+    <id>http://linkerlin.github.com/blog/2013/03/02/mac-book-pro-374-2010-mid-kuan-sheng-ji-10gbnei-cun</id>
+    <content type="html"><![CDATA[<pre><code>374是Mac Book Pro的2010年中款，由于显卡是Nvidia的320m，比后面3年的MBP显卡都要好，所以堪称一代经典。
+</code></pre>
+
+<p>MBP 374的内存只有4GB，而且是1.5v的DDR3 1066。所以升级很麻烦。
+很多人想一次升级两条内存条，但是苦于找不到对应型号，只好用1333的替代。</p>
+
+<p>问题是，两条1333的内存在374上不能点亮，所以，最稳妥的升级方案就是用一条1333的8GB替换原来的2GB条，组成10GB的内存。虽然没有了双通道的性能优势，但是多出来的内存怎么也比硬盘快了三个数量级。所以总体来说，性能提升还是非常大的。</p>
+
+<p>昨天升级好，以后，开了所有常用的程序，开发环境，word，内存还有3GB剩余。可见，即便升级到两条8GB的配置，也没有太多的提升空间。</p>
+]]></content>
+  </entry>
+  
+</feed>

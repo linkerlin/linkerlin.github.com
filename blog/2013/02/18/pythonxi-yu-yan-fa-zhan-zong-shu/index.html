@@ -5,15 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Linker Lin's Blog</title>
+  <title>Python系语言发展综述 - Linker Lin's Blog</title>
   <meta name="author" content="Linker Lin">
 
   
-  <meta name="description" content="MongoDB是个非常优秀的NoSQL数据库。但是也有一个比较严重的问题。
-从设计上讲，MongoDB采用OS的MMap机制来替代自己管理的Cache，是一个非常取巧的方法。
-好处是简单，缺点是非常的不可控。
-在系统内存吃紧的情况下，mongodb的性能会急速下降。
-而且如果， &hellip;">
+  <meta name="description" content="Python系语言经过多年的发展，衍生出多个版本。其中： CPython 也就是通常说的Python。这个版本在3.x系列发展的时候遇到困难，由于设计上的失误，很多开源组件还是坚持在2.5+版本。这种情况，在3.x系列不发生巨大改变的情况下，不会改变。 Cython 由于人工智能和数学的需要， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -22,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://linkerlin.github.com">
+  <link rel="canonical" href="http://linkerlin.github.com/blog/2013/02/18/pythonxi-yu-yan-fa-zhan-zong-shu">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Linker Lin's Blog" type="application/atom+xml">
@@ -67,15 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/05/14/mongodbs-problem/">Mongodb&#8217;s Problem</a></h1>
+      <h1 class="entry-title">Python系语言发展综述</h1>
     
     
       <p class="meta">
@@ -91,36 +84,102 @@
   
 
 
-<time datetime="2013-05-14T17:17:00+08:00" pubdate data-updated="true">May 14<span>th</span>, 2013</time>
+<time datetime="2013-02-18T13:53:00+08:00" pubdate data-updated="true">Feb 18<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>MongoDB是个非常优秀的NoSQL数据库。但是也有一个比较严重的问题。
-从设计上讲，MongoDB采用OS的MMap机制来替代自己管理的Cache，是一个非常取巧的方法。
-好处是简单，缺点是非常的不可控。
-在系统内存吃紧的情况下，mongodb的性能会急速下降。
-而且如果，由于某种原因导致系统死机，那么只有在开启日志的情况下，数据才能保证完整。
-但是开启日志以后的mongodb的性能又会下降。</p>
+<div class="entry-content"><p>Python系语言经过多年的发展，衍生出多个版本。其中：</p>
 
-<h1>所以，如果没有必要，千万不要在mongodb里面存储很重要的数据。</h1>
+<h4>CPython</h4>
+
+<p>也就是通常说的Python。这个版本在3.x系列发展的时候遇到困难，由于设计上的失误，很多开源组件还是坚持在2.5+版本。这种情况，在3.x系列不发生巨大改变的情况下，不会改变。</p>
+
+<h4>Cython</h4>
+
+<p>由于人工智能和数学的需要，更快的数值计算需求催生了Cython。Cython的优势：代码可以从Python转换到C/CPP，从而保护了源码并且提高了CPU密集性的计算的性能。</p>
+
+<h4>PyPy</h4>
+
+<p>从欧盟拿了不少资助，发展的很好。RPython是其核心的简化的Python方言。性能提升来自JIT编译器。但是，PyPy在兼容性上做不到Cython那样的无缝融合到标准CPython环境。从而，很少有人使用，基本是玩具。</p>
+
+<h4>mypy</h4>
+
+<p>一个刚起步的方言，画了一个很大的饼。</p>
+
+<h4>shedskin</h4>
+
+<p>一个务实的Python到C++编译器，不能100%兼容，但是可以独立运行。同样是玩具。</p>
+
+<h4>Jython</h4>
+
+<p>兼容度极高，但是面向Java环境，不适合需要使用C扩展的情况。</p>
+
+<h4>IronPython</h4>
+
+<p>微软系的东西，不解释。</p>
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Linker Lin</span></span>
+
+      
+
+
+
+
+
+
+
+
   
 
 
-    </article>
+<time datetime="2013-02-18T13:53:00+08:00" pubdate data-updated="true">Feb 18<span>th</span>, 2013</time>
+      
+
+<span class="categories">
   
-  <div class="pagination">
+    <a class='category' href='/blog/categories/python/'>Python</a>
+  
+</span>
+
+
+    </p>
     
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://linkerlin.github.com/blog/2013/02/18/pythonxi-yu-yan-fa-zhan-zong-shu/" data-via="linkerlin" data-counturl="http://linkerlin.github.com/blog/2013/02/18/pythonxi-yu-yan-fa-zhan-zong-shu/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/02/18/jythonshe-zhi-mo-ren-bian-ma/" title="Previous Post: Jython设置默认编码">&laquo; Jython设置默认编码</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/03/02/mac-book-pro-374-2010-mid-kuan-sheng-ji-10gbnei-cun/" title="Next Post: Mac Book Pro 374 2010 mid 款升级10GB内存">Mac Book Pro 374 2010 mid 款升级10GB内存 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -128,7 +187,7 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/05/14/mongodbs-problem/">Mongodb&#8217;s Problem</a>
+        <a href="/blog/2013/05/14/mongodbs-problem/">Mongodb's Problem</a>
       </li>
     
       <li class="post">
@@ -153,7 +212,7 @@
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/linkerlin">@linkerlin</a> on GitHub
@@ -194,6 +253,7 @@
 
   
 </aside>
+
 
     </div>
   </div>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: mongodb | Linker Lin's Blog]]></title>
+  <link href="http://linkerlin.github.com/blog/categories/mongodb/atom.xml" rel="self"/>
+  <link href="http://linkerlin.github.com/"/>
+  <updated>2013-05-14T17:25:11+08:00</updated>
+  <id>http://linkerlin.github.com/</id>
+  <author>
+    <name><![CDATA[Linker Lin]]></name>
+    <email><![CDATA[linker.lin@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[mongodb's problem]]></title>
+    <link href="http://linkerlin.github.com/blog/2013/05/14/mongodbs-problem/"/>
+    <updated>2013-05-14T17:17:00+08:00</updated>
+    <id>http://linkerlin.github.com/blog/2013/05/14/mongodbs-problem</id>
+    <content type="html"><![CDATA[<p>MongoDB是个非常优秀的NoSQL数据库。但是也有一个比较严重的问题。
+从设计上讲，MongoDB采用OS的MMap机制来替代自己管理的Cache，是一个非常取巧的方法。
+好处是简单，缺点是非常的不可控。
+在系统内存吃紧的情况下，mongodb的性能会急速下降。
+而且如果，由于某种原因导致系统死机，那么只有在开启日志的情况下，数据才能保证完整。
+但是开启日志以后的mongodb的性能又会下降。</p>
+
+<h1>所以，如果没有必要，千万不要在mongodb里面存储很重要的数据。</h1>
+]]></content>
+  </entry>
+  
+</feed>
